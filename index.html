@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ja-jp">
+
+<head>
+	<meta charset="UTF-8">
+	<script src="jQuery/jquery-1.4.1.min.js" type="text/javascript"></script>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>書庫</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700">
+	<link href="font/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link id="noScriptCSS" rel="stylesheet" href="css/noscript.css">
+	<link rel="stylesheet" href="css/page normalize.css">
+    <!-- scriptReversal-->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!--[if lte IE 8]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+	<!--thumb javascript-->
+	<script type="text/javascript">
+		$(function () {
+			$(".thumb").hover(function () {
+				$(this).stop().animate({opacity:0.5},"fast");
+			},function () {
+				$(this).stop().animate({opacity:1},"fast");
+			});
+		});
+	</script>
+	<!--/thumb javascript-->
+
+</head>
+
+<body>
+<script>
+    // 若支援javascript則不載入noscriipt.css
+	var _elem = document.getElementById('noScriptCSS');
+	_elem.parentNode.removeChild(_elem);
+</script>
+
+<div id="wrapper">
+
+<header id="headerContainer">
+<div class="inner">
+
+<h1 id="siteID"><a data-prog="0" href="#slide1">Syue Ming Yu <span class="small">悅讀生活</span></a></h1>
+<nav id="navigation">
+<ul >
+<li><a data-prog="0" href="#slide1">書庫</a></li>
+<li><a data-prog="2" href="#slide2">文學</a></li>
+<li><a data-prog="4" href="#slide4">技術</a></li>
+<li><a data-prog="6" href="#slide6">設計</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+
+
+<div id="subContainer">
+<nav id="mainNavigation">
+<ul>
+<li class="nav_Search"><a href="#"><i class="fa fa-search"></i><span>搜尋</span></a></li>
+<li class="nav_Book separate top"><a href="Book.html"><i class="fa fa-tags"></i><span>Book</span></a></li>
+<li class="nav_News"><a href="News.html"><i class="fa fa-bookmark"></i><span>News</span></a></li>
+<li class="nav_AboutMe"><a href="AboutMe.html"><i class="fa fa-heart"></i><span>About me</span></a></li>
+<li class="nav_Contact"><a href="Contact.html"><i class="fa fa-comment"></i><span>Contact</span></a></li>
+
+</ul>
+<p class="mainNavigation_trigger"><a><i class="fa fa-bars"></i></a></p>
+</nav>
+<!--/ mainNavigation -->
+</div>
+<!--/ subContainer -->
+
+
+
+<div id="contentContainer">
+
+<!-- slide 1 -->
+
+<section class="parallax" id="slide1">
+<h2 class="photoContainer whole"><img class="photo" src="img/old-books-in-a-shelf-1231150.jpg" alt="Photo by (c)Yutaka Hayashi" title="Photo by (c)Yutaka Hayashi"></h2>
+</section>
+
+<!-- slide 2 -->
+
+<section class="parallax" id="slide2">
+<div class="slideContent">
+<div class="descriptionContainer">
+<header>
+<h2>弗里德里希·尼采</h2>
+<p class="meta">某某作品</p>
+</header>
+<blockquote>名言佳句</blockquote>
+<blockquote>八八八</blockquote>
+<p><a href="literature.html">進入書庫</a></p>
+</div>
+<div class="photoContainer"><img class="photo" src="img/me.jpg" alt="鐵路博物館 Photo by (c)Yutaka Hayashi" title="鐵路博物館 Photo by (c)Yutaka Hayashi"> </div>
+</div>
+</section>
+
+<!-- slide 3 -->
+
+<section class="parallax" id="slide3">
+<h2 class="photoContainer whole"><img class="photo" src="img/3.jpg" alt="Photo by (c)Yutaka Hayashi" title="Photo by (c)Yutaka Hayashi"></h2>
+</section>
+
+<!-- slide 4 -->
+
+<section class="parallax" id="slide4">
+<div class="slideContent">
+<div class="descriptionContainer">
+<header>
+<h2>圖靈</h2>
+<p class="meta">某某技術</p>
+</header>
+    <blockquote>barbarbar</blockquote>
+<p><a href="technology">進入書庫</a><</p>
+</div>
+<div class="photoContainer"><img class="photo" src="img/Alan_Turing_Aged_16.jpg" alt="鐵路博物館 Concept Photo by (c)Yutaka Hayashi" title="鐵路博物館 Concept Photo by (c)Yutaka Hayashi"></div>
+</div>
+</section>
+
+<!-- slide 5 -->
+
+<section class="parallax" id="slide5">
+<h2 class="photoContainer whole"><img class="photo" src="img/design.jpg" alt="Photo by (c)Yutaka Hayashi" title="Photo by (c)Yutaka Hayashi"></h2>
+</section>
+
+<!-- slide 6 -->
+
+<section class="parallax" id="slide6">
+<div class="slideContent">
+<div class="descriptionContainer">
+<header>
+<h2>某某作品</h2>
+<p class="meta">某某作家</p>
+</header>
+<blockquote>
+<dl>
+    <dt>啦啦啦</dt>
+    <dd>啦啦啦啦啦啦</dd>
+    <dd>啦啦啦啦啦啦啦啦啦</dd>
+    <dd>啦啦啦啦啦啦啦啦啦啦啦啦</dd>
+</dl>
+<dl>
+    <dt>啦啦啦</dt>
+    <dd>啦啦啦啦啦啦啦啦啦啦啦啦</dd>
+</dl>
+<dl>
+    <dt>■休館日</dt>
+    <dd>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</dd>
+</dl>
+</blockquote>
+<p><a href="design.html">進入書庫</a></p>
+</div>
+<div class="photoContainer"><img class="photo" src="img/019.jpg" alt="鐵路博物館 參觀資訊 Photo by (c)Yutaka Hayashi" title="鐵路博物館 參觀資訊 Photo by (c)Yutaka Hayashi"></div>
+</div>
+</section>
+
+<!-- slide 7 -->
+
+<section class="parallax" id="slide7">
+<h2 class="photoContainer whole"><img class="photo" src="img/tepaku/04.jpg" alt="Photo by (c)Yutaka Hayashi" title="Photo by (c)Yutaka Hayashi"></h2>
+</section>
+
+
+
+
+</div>
+<!--/contentContainer -->
+
+
+
+<div id="pagerNavi">
+	<a class="button"><i class="fa fa-chevron-up"></i></a>
+	<a class="button"><i class="fa fa-chevron-down"></i></a>
+</div>
+<!--/pagerNavi-->
+
+<footer id="footerContainer">
+<div class="inner">
+<p id="copyright">2016&copy; SyueMingYu Library All Rights Reserved.</p>
+</div>
+</footer>
+<!-- /footer -->
+
+</div>
+<!--/wrapper -->
+
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/scriptReversal.js"></script>
+	<script src="js/jquery.lazyload.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/script_fluid.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/script_pagetop2.js"></script>
+<!--scriptReversal-->
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jarallax-0.2.3b.min.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+    
+   
+
+
+</body>
+</html>
