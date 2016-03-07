@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja-jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author"      content="Toshiya TSURU @ SunBusiness, Inc.">
+	<meta name="viewport"    content="width=device-width, initial-scale=1">
+     <title>聯絡我 :)</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700">
+    <link rel="stylesheet" href="css/page normalize.css">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Contactstyle.css">
+
+</head>
+<body>
+    <div id="wrapper">
+        <header id="headerContainer">
+
+        <div class="inner">
+            <h1 id="siteID">Syue Ming Yu<span class="small">  悅讀生活</span></h1>
+            <nav id="navigation">
+            <ul>  
+            	<li><a href="Book.html">書庫</a></li>
+                <li><a href="News.html">文章</a></li>
+                <li><a href="AboutMe.html">關於</a></li>
+                <li><a href="Contact.html">聯繫</a></li>
+            </ul>
+            </nav>
+            
+    </header>
+        
+        <!--/headerContainer -->
+        <br>
+        <br>
+        <br>
+        <div id="contentContainer">
+            <div id="entriesContainer" class="inner">
+                <article class="post">
+				<div class="entry-contentContainer">
+		<div class="entry-content clearfix">
+			<div class="container">
+			<div class="row">
+				<div class="col-sm-offset-3 span9">
+					<h1>聯絡我～～</h1>
+					<hr/>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<form class="form-horizontal" role="form" id="form" >
+						
+						<div class="form-group">
+							<label for="last_name" class="col-sm-3 control-label">姓</label>
+							<div class="col-sm-3 controls">
+								<input type="text" id="last_name" name="last_name" placeholder="薛" class="form-control" size="20" >
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="first_name" class="col-sm-3 control-label">名</label>
+							<div class="col-sm-3 controls">
+								<input type="text" id="first_name" name="first_name" placeholder="先生" class="form-control" size="20" >
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="email" class="col-sm-3 control-label">電子郵件</label>
+							<div class="col-sm-4 controls">
+								<input type="email" id="email" name="email" placeholder="email@emal.com" maxlength="255" class="form-control" size="40">
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="content" class="col-sm-3 control-label">詢問內容</label>
+							<div class="col-sm-6 controls">
+								<textarea class="form-control" rows="10" cols="100" id="content" name="content" placeholder="請輸入1,000 字以内"  ></textarea>
+							</div>
+						</div>
+						<br>
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-6">
+								<button type="submit" class="btn btn-primary btn-lg btn-block">送出</button>
+							</div>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- jQuery -->
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<!-- Bootstrap --> 
+		<script src="js/bootstrap.min.js"></script>
+		<!-- zip2addr plugin -->
+		<script src="js/jquery.zip2addr.js"></script>
+		<!-- jQuery Validation Plugin -->
+		<script src="js/jquery.validate.min.js"></script>
+		<!-- my scripts -->
+		<script>
+			(function(){
+				$(function() {
+					// 套用zip2addr
+					$('#zip').zip2addr({
+						pref:'#pref',
+						addr:'#addr'
+					});
+					// jQuery Validation Plugin 的Twitter BootStrap 3 支援
+					$.validator.setDefaults({
+						highlight: function(element) {
+							$(element).closest('.form-group').addClass('has-error');
+						},
+						unhighlight: function(element) {
+							$(element).closest('.form-group').removeClass('has-error');
+						},
+						errorElement:   'span',
+						errorClass:     'help-block',
+						errorPlacement: function(error, element) {
+							if(element.parent('.controls').length) {
+								error.insertAfter(element.parent());
+							} else {
+								error.insertAfter(element);
+							}
+						}
+					});
+					// jQuery Validation Plugin的套用
+					$('#form').validate({
+						/**
+						 * validate 規則設定
+						 */
+						rules: {
+							last_name:     "required",
+							first_name:    "required",
+							email:      {
+								required:  true,
+								email:     true
+							},
+							content:    {
+								maxlength: 1000
+							}
+						},
+						/**
+						 * validate 訊息設定
+						 */
+						messages: {
+							last_name:     "請輸入姓。",
+							first_name:    "請輸入名。",
+							email:       {
+								required:  "請輸入電子郵件。",
+								email:     "請輸入正確的電子郵件格式。",	
+							},
+							content:     {
+								maxlength: jQuery.format("詢問內容請輸入 {0} 字以内。") 
+							},
+						}
+					});
+				});
+			})();
+		</script>
+		</div>
+		</div>
+		</article>
+
+                
+               
+                
+                
+            </div>
+            <!--/entriesContainer -->
+        </div>
+        <!--/contentContainer -->
+        <p class="pagetop">
+            <a href="#wrapper">PAGE TOP</a></p>
+        <footer id="footerContainer">
+<div class="inner">
+<p id="copyright">2016 薛名喻 Rights Ressered.</p>
+</div>
+</footer>
+<!-- /footer -->
+
+</div>
+    <!--/wrapper -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.lazyload.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/script_fluid.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/script_pagetop2.js"></script>
+</body>
+</html>

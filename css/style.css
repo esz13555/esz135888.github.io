@@ -1,0 +1,566 @@
+﻿@charset 'utf-8';
+/*
+style.css
+*/
+
+body {
+  position: relative;
+  font-size: 62.5%;
+  line-height: 1.8;
+  margin: 0;
+  background: url(../img/bg.jpg);
+}
+
+h1,h2,p,span,li,a {
+  font-family: 'Roboto Condensed', Arial, Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: #000;
+}
+a, a.btn {
+  /*
+  link common animation
+  */
+  text-decoration: none;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+/*
+content area
+*/
+
+.inner {
+  position: relative;
+  max-width: 1080px;
+  min-width: 720px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#wrapper {
+  width: 100%;
+}
+/*header area*/
+#headerContainer {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background: rgba( 32, 16, 2 ,0.6);
+  behavior: url(PIE.htc);
+}
+#headerTopicContainer {
+  position: relative;
+  background: #000;
+}
+#headerTopicContainer img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+/*site logo*/
+#siteID {
+  font-size: 3.0em;
+  color: #fff;
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 0 0 0 8px;
+  padding: 12px 0 14px;
+}
+#siteID a {
+  color: #fff;
+}
+
+#siteID .small {
+  color: #fff;
+  font-size: 0.7em;
+}
+
+#navigation {
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+}
+
+#navigation ul,
+#navigation li {
+  list-style: none;
+  margin: 3px;
+  padding: ;
+}
+#navigation li {
+	float: left;
+  margin: -2.5px 0 0 1px;
+}
+#navigation a {
+  display: block;
+  color: #fff;
+  font-size: 1.6em;
+  line-height: 1;
+  text-align: center;
+  padding: 20px 2em 21px;
+  background: rgba( 255, 255, 255, 0.1);
+}
+#navigation a:hover {
+  color: #333;
+  background: rgba( 255, 255, 255, 0.8);
+}
+/*footer style*/
+#footerContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 40px;
+  background: rgba( 32, 16, 2 ,0.6);
+  padding: 12px 0;
+  behavior: url(PIE.htc);
+}
+
+#copyright{
+  color: #fff;
+	text-align: right;
+  font-size: 1.4em;
+  margin: 0;
+}
+
+/*
+layout
+*/
+
+#slide1 {
+    top: 0;
+}
+
+.parallax {
+  display: block;
+  position: fixed;
+  top: 120%;
+  left: 0%;
+      z-index: 100;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  text-align: center;
+  background: #fff;
+}
+/*
+slideContent basic style
+*/
+
+.slideContent {
+  position: relative;
+  left: 0; top: 0;
+  width: 100%;
+  min-height: 1000px;
+  margin: 0 auto;
+  padding: 80px 0 0;
+  font-size: 1.6em;
+  line-height: 1.7;
+}
+.slideContent:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.slideContent h2 {
+  font-size: 3em;
+  padding: 0 0 0.1em; margin: 0;
+  font-weight: normal;
+  color: #ddd;
+}
+.slideContent .meta {
+  font-size: 1.6em;
+  padding-left: 0.2em;
+  color: #ddd;
+}
+.slideContent header {
+  margin-bottom: 2em;
+}
+.descriptionContainer {
+  float: right;
+  width: 46%;
+  text-align: left;
+  margin: 0 0 0 8%;
+  color: #ccc;
+}
+.descriptionContainer blockquote,
+.descriptionContainer p {
+  margin-bottom: 1em;
+}
+.descriptionContainer dl {
+  margin: 0 0 2em;
+}
+.descriptionContainer dt {
+  color: #ccc;
+}
+.descriptionContainer dd {
+  margin: 0; padding: 0;
+}
+.photoContainer {
+  float: right;
+  width: 46%;
+}
+h2.photoContainer.whole {
+  float: none;
+  width: auto;
+  margin: 0;
+  text-align: center;
+}
+h2.photoContainer.whole img {
+  width: 100%;
+}
+.photoContainer img.photo {
+  border: 6px solid rgb( 32, 32, 32);
+  width: 50%;
+}
+.photoContainer.whole img.photo {
+  border-width: 0;
+
+}
+/* pagerNavi */
+
+#pagerNavi {
+  position: fixed;
+  right: 4em;
+  bottom: 4rem;
+  z-index: 1000;
+}
+#pagerNavi p {
+  margin: 0 0 4px;
+}
+#pagerNavi a.button {
+  display: block;;
+  padding: 4px 10px;
+  margin: 0;
+  font-size: 1.4em;
+  color: #fff;
+  border: 1px solid rgb( 64, 64, 64);
+  background: rgb( 32, 32, 32);
+  opacity: 0.6;
+  cursor: pointer;
+
+  transition: opacity 0.4s linear;
+  -webkit-transition: opacity 0.4s linear;
+  -moz-transition: opacity 0.4s linear;
+  -o-transition: opacity 0.4s linear;
+  -ms-transition: opacity 0.4s linear;
+}
+#pagerNavi a.button i {
+  display: inline-block;
+  margin-top: 0;
+  line-height: 1;
+}
+#pagerNavi a.button:hover {
+  opacity: 1;
+}
+/*
+custom style
+*/
+
+#contentContainer {
+  padding: 72px 0 40px;
+  background: #ebebeb;
+  min-height: 1200px;
+}
+
+#contentContainer p,
+#contentContainer ul,
+#contentContainer li {
+  margin: 0;
+  padding: 0;
+}
+#contentContainer ul,
+#contentContainer li {
+  list-style: none;
+}
+
+
+.loaderSymbol {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  background: url(../img/loader.gif);
+  behavior: url(PIE.htc);
+}
+/* 從左側滑入的顯示區域 */
+#subContainer {
+  position: fixed;
+  left: -260px;
+  top: 0;
+  z-index: 500;
+  width: 260px;
+  height: 100%;
+  background-color: rgba( 32, 16, 2 ,0.1);
+  -webkit-transition: left 0.4s ease-in-out;
+  transition: left 0.4s ease-in-out;
+  behavior: url(PIE.htc);
+}
+#subContainer.appeared {
+  left: 0;
+}
+#mainNavigation {
+  /* nav */
+  position: relative;
+  top: 60px;
+}
+#mainNavigation li {
+  padding-top: 1px;
+  margin-bottom: 1px;
+}
+#mainNavigation a {
+  display: block;
+  padding: 1.5em;
+  overflow: hidden;
+  color: #888;
+  border-left: 0.5em solid #201002;
+}
+#mainNavigation .separate a {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+#mainNavigation i {
+  display: inline-block;
+  width: 18%;
+  vertical-align: middle;
+  font-size: 2.5em;
+  line-height: 1;
+  color: inherit;
+}
+#mainNavigation span {
+  display: inline-block;
+  font-size: 1.6em;
+  line-height: 1;
+  vertical-align: middle;
+  width: 70%;
+  color: inherit;
+}
+#mainNavigation a,
+#mainNavigation a:hover i,
+#mainNavigation a:hover span {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#mainNavigation .nav_bookmark a {
+  padding-left: 1.8em;
+}
+
+#mainNavigation .nav_Search a:hover {
+  /* Search的顏色 */
+  color: #914808;
+  border-color: #914808;
+  background-color: rgba(255, 190, 159 ,0.6);
+}
+
+#mainNavigation .nav_News a:hover {
+  /* News的顏色 */
+  color: #763100;
+  border-color: #763100;
+  background-color: rgba(255, 190, 159 ,0.6);
+}
+
+#mainNavigation .nav_AboutMe a:hover {
+  /* About me的顏色 */
+  color: #682500;
+  border-color: #682500;
+  background-color: rgba(255, 190, 159 ,0.6);
+}
+
+#mainNavigation .nav_Contact a:hover {
+  /* Contact的顏色 */
+  color: #5a1a00;
+  border-color: #5a1a00;
+  background-color: rgba(255, 190, 159 ,0.6);
+}
+
+#mainNavigation .nav_Book a:hover {
+  /* Book的顏色 */
+  color: #843d00;
+  border-color: #843d00;
+  background-color: rgba(255, 190, 159 ,0.6);
+}
+
+#mainNavigation .mainNavigation_trigger {
+  /* nav顯示、隱藏的按鈕 */
+  position: absolute;
+  bottom: 0;
+  right: -4em;
+  width: 4em;
+  border-radius: 0 8px 8px 0;
+  background-color: rgba( 32, 16, 2 ,0.3);
+  behavior: url(PIE.htc);
+}
+#mainNavigation .mainNavigation_trigger a {
+  border: none;
+  padding: 1em 1em 0.75em 0.75em;
+  cursor: pointer;
+}
+#mainNavigation .mainNavigation_trigger i {
+  width: auto;
+}
+
+
+/*
+Masonry grid basic setting
+*/
+
+.grid_container {
+  width: 100%;
+  margin: 0 0 50px;
+}
+
+/*　1 column basic setting（column,grid)　*/
+
+.grid_container .column {
+  /* 無法使用CSS3的box-sizing的話，將width扣除padding和border的値 */
+  width: 266px;
+  padding: 5px;
+  margin: 2px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+
+  /* Javascript無效時會載入noscript.css，此屬性會變成visible */
+  visibility: hidden;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 2 column(column, grid)的寬度*/
+.grid_container .column.w2 {
+  /* 無法使用CSS3的box-sizing的話，將width扣除padding和border的値 */
+  width: 536px;
+}
+
+/* 3 column(column, grid)的寬度*/
+.grid_container .column.w3 {
+  /* 無法使用CSS3的box-sizing的話，將width扣除padding和border的値 */
+  width: 806px;
+}
+
+.grid_container .column img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.grid_container .column .title {
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.4;
+  margin: 0.5em 0 0;
+}
+
+
+/*
+sample3　fluid grid的額外設定
+*/
+
+#photoGalleryContainer .grid_sizer {
+  /*　
+      用%在masonry中設定基本的grid寬度，則必須用CSS selector指定
+  */
+  width: 25%;
+}
+#photoGalleryContainer.fluid .column {
+  width: 24.5%;
+  margin: 0.25%;
+}
+#photoGalleryContainer.fluid .column.w2 {
+  width: 49.5%;
+}
+#photoGalleryContainer.fluid .column.w3 {
+  width: 74.5%;
+}
+
+/*
+sample4　colorbox的額外設定
+*/
+
+#photoGalleryContainer.withColorbox .column {
+  background: #fff;
+  -webkit-transition: background-color .4s linear;
+  transition: background-color .4s linear;
+}
+#photoGalleryContainer.withColorbox .column:hover {
+  background: #F0E247;
+}
+
+
+@media only screen and (max-width:767px) {
+  .inner {
+    max-width: 94%;
+    min-width: 94%;
+    width: 94%;
+  }
+  #headerContainer {
+    position: relative;
+  }
+  #siteID {
+    float: none;
+    text-align: center;
+  }
+  #contentContainer {
+    padding: 20px 0 40px;
+    margin: 0 auto;
+  }
+  #copyright {
+    text-align: center;
+  }
+  #photoGalleryContainer .column {
+    width: 100%;
+  }
+  #photoGalleryContainer.fluid .column {
+    width: 49.5%;
+  }
+  .loaderSymbol {
+    position: fixed;
+    top: 50%;
+    left: 45%;
+  }
+
+}
+/*
+大頭照設定
+*/
+
+
+  #word {
+    position:relative;
+    top: 400px;
+    left: 40%;
+    font-size:20px;
+    letter-spacing: 5px;
+
+  }
+  /* ------- thumb ------- */
+.thumb {
+  width: 100px;
+  height:100px;
+  cursor:pointer;
+}
+
+ 
+
+@media only screen and (min-width: 321px) and (max-width: 599px){
+
+  #subContainer {
+    left: -80%;
+    width: 80%;
+  }
+  #mainNavigation li {
+    float: left;
+    width: 50%;
+  }
+  #mainNavigation .mainNavigation_trigger {
+    top: 10em;
+    bottom: auto;
+  }
+}
